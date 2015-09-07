@@ -24,6 +24,7 @@
                       ng-model="label.Text"
                       ng-change="vm.update(label)"
                       class="ColorLabel"
+                      ng-model-options="{debounce: 250}"
                       ng-style="{'background-color': label.Color }" />
             </li>
         </ul>
