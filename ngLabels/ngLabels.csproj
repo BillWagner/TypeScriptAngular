@@ -1000,6 +1000,7 @@
     <Content Include="Scripts\version.json" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="App_Script\LabelDataService.ts" />
     <TypeScriptCompile Include="App_Script\Label.d.ts" />
     <TypeScriptCompile Include="App_Script\labelEditor.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
