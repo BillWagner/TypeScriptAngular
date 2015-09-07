@@ -20,11 +20,11 @@
     <div ng-controller="labelCollection as vm">
         <ul>
             <li class="ColorList" ng-repeat="label in vm.sequence">
-                <span 
+                <span contenteditable
+                      ng-model="label.Text"
+                      ng-change="vm.update(label)"
                       class="ColorLabel"
-                      ng-style="{'background-color': label.Color }">
-                    {{label.Text}}
-                    </span>
+                      ng-style="{'background-color': label.Color }" />
             </li>
         </ul>
     </div>
@@ -32,6 +32,7 @@
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-resource.js"></script>
     <script src="App_Script/labelEditor.js"></script>
+    <script src="App_Script/contenteditable.js"></script>
     <script src="App_Script/LabelDataService.js"></script>
     <script src="App_Script/LabelCollection.js"></script>
 </body>
