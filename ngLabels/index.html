@@ -3,10 +3,36 @@
 <head>
     <title></title>
     <meta charset="utf-8" />
+    <style>
+        .ColorLabel {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .ColorList {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    </style>
+
 </head>
 <body>
+    <div ng-controller="labelCollection as vm">
+        <ul>
+            <li class="ColorList" ng-repeat="label in vm.sequence">
+                <span 
+                      class="ColorLabel"
+                      ng-style="{'background-color': label.Color }">
+                    {{label.Text}}
+                    </span>
+            </li>
+        </ul>
+    </div>
+
     <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
     <script src="App_Script/labelEditor.js"></script>
     <script src="App_Script/LabelDataService.js"></script>
+    <script src="App_Script/LabelCollection.js"></script>
 </body>
 </html>
